@@ -9,9 +9,9 @@ public class Main {
     String fizz = "Fizz";
     String buzz = "Buzz";
     
-    String exitInput = "pass";
+    String exitInput = "";
     
-    while (!exitInput.equals("quit")) {
+    while (!exitInput.equals("q")) {
         System.out.print("Number: ");
         int number = scanner.nextInt();
         
@@ -26,9 +26,9 @@ public class Main {
         } else {
           System.out.println(number);
         }
+        System.out.println("Press \"s\" to continue, or type \"q\" to exit");
+        exitInput = scanner.next().toLowerCase();
     }
-    System.out.println("Press ENTER to continue, or type \"quit\" to exit");
-    exitInput = scanner.nextLine().toLowerCase();
     System.out.println("Thank you for playing!");
   }
 }
